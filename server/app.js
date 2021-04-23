@@ -9,7 +9,6 @@ app.use(express.static('docs'));
 
 // create express app
 
-
 // Setup server port
 const port = process.env.PORT || 5000;
 
