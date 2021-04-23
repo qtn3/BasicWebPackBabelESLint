@@ -42,7 +42,7 @@ city.findAll = function (result) {
     });
 };
 city.update = (id, city, result) => {
-    dbConn.query('UPDATE tblCitiesImport SET fldName=?,fldLat=?,fldLong=?,fldCountry=?,fldAbbreviation=?,fldCapitalStatus=?,fldPopulation=? WHERE id = ?', [city.fldName, city.fldLat, city.fldLong, city.fldCountry, city.fldAbbreviation, city.fldCapitalStatus, city.fldPopulation, id], function (err, res) {
+    dbConn.query('UPDATE tblCitiesImport SET fldName=?,fldLat=?,fldLong=?,fldCountry=?,fldAbbreviation=?,fldCapitalStatus=?,fldPopulation=? WHERE id = ?', [city.fldName, city.fldLat, city.fldLong, city.fldCountry, city.fldAbbreviation, city.fldCapitalStatus, city.fldPopulation, id], (err, res) => {
         if (err) {
             console.log('error: ', err);
             result(null, err);
