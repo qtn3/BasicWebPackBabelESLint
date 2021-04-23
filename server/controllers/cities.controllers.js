@@ -18,7 +18,7 @@ exports.create = (req, res) => {
     } else {
         City.create(newEmployee, (err, employee) => {
             if (err) res.send(err);
-            res.json({ error: false, message: 'Employee added successfully!', data: employee });
+            res.json({ error: false, message: 'City added successfully!', data: employee });
         });
     }
 };
@@ -36,7 +36,7 @@ exports.update = (req, res) => {
     } else {
         City.update(req.params.id, new City(req.body), (err) => {
             if (err) res.send(err);
-            res.json({ error: false, message: 'Employee successfully updated' });
+            res.json({ error: false, message: 'City successfully updated' });
         });
     }
 };
@@ -44,6 +44,6 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
     City.delete(req.params.id, (err) => {
         if (err) res.send(err);
-        res.json({ error: false, message: 'Employee successfully deleted' });
+        res.json({ error: false, message: 'City successfully deleted' });
     });
 };
