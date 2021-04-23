@@ -1,6 +1,6 @@
 const dbConn = require('../config/db.config');
-//city object create
-var city = function (city) {
+// city object create
+const city = (city) => {
     this.fldName = city.fldName;
     this.fldLat = city.fldLat;
     this.fldLong = city.fldLong;
