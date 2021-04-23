@@ -13,12 +13,12 @@ exports.create = (req, res) => {
     const newEmployee = new City(req.body);
 
     // handles null error
-    if (req.body.constructor === Object && Object.keys(req.body).length === 0){
+    if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
         res.status(400).send({ error: true, message: 'Please provide all required field' });
     } else {
         City.create(newEmployee, (err, employee) => {
             if (err) res.send(err);
-            res.json({ error: false, message: 'Employee added successfully!',data: employee });
+            res.json({ error: false, message: 'Employee added successfully!', data: employee });
         });
     }
 };
