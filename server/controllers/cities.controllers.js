@@ -41,11 +41,9 @@ exports.update = (req, res) => {
     }
 };
 
-
-exports.delete = function(req, res) {
-    City.delete( req.params.id, function(err, employee) {
-        if (err)
-            res.send(err);
-        res.json({ error:false, message: 'Employee successfully deleted' });
+exports.delete = (req, res) => {
+    City.delete(req.params.id, (err) => {
+        if (err) res.send(err);
+        res.json({ error: false, message: 'Employee successfully deleted' });
     });
 };
