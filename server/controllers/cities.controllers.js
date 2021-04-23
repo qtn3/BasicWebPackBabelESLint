@@ -23,11 +23,9 @@ exports.create = (req, res) => {
     }
 };
 
-
-exports.findById = function(req, res) {
-    City.findById(req.params.id, function(err, employee) {
-        if (err)
-            res.send(err);
+exports.findById = (req, res) => {
+    City.findById(req.params.id, (err, employee) => {
+        if (err) res.send(err);
         res.json(employee);
     });
 };
