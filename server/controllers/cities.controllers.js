@@ -5,10 +5,9 @@ exports.findAll = (req, res) => {
         console.log('controller');
         if (err) res.send(err);
         console.log('res', cities);
-        res.json({ "data": cities});
+        res.json({ data: cities });
     });
 };
-
 
 exports.create = function(req, res) {
     const new_employee = new City(req.body);
