@@ -1,7 +1,7 @@
 const City = require('../models/city.model');
 
-exports.findAll = function(req, res) {
-    City.findAll(function(err, cities) {
+exports.findAll = (req, res) => {
+    City.findAll((err, cities) => {
         console.log('controller')
         if (err)
             res.send(err);
